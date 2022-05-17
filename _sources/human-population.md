@@ -25,7 +25,7 @@ library(tidyverse)
 ```
 
 ```{code-cell}
-pop <- read_csv("https://bit.ly/34utiCg")
+pop <- read_csv("https://raw.githubusercontent.com/mikheyev/ecology-r-code/main/data/humans.csv")
 pop
 ```
 

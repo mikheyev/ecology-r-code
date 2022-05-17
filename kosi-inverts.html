@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Describing communities using summary statistics &#8212; R commands for BIOL2131/BIOL6004</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Estimating human population growth parameters" href="human-population.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">R commands for BIOL2131/BIOL6004</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="human-population.html">
+   Estimating human population growth parameters
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Describing communities using summary statistics
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-functions-for-diversity-and-evenness">
+   Define functions for diversity and evenness
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reshape-data-to-make-it-easier-to-analyze">
+   reshape data to make it easier to analyze
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Describing communities using summary statistics</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#define-functions-for-diversity-and-evenness">
+   Define functions for diversity and evenness
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reshape-data-to-make-it-easier-to-analyze">
+   reshape data to make it easier to analyze
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="describing-communities-using-summary-statistics">
+<h1>Describing communities using summary statistics<a class="headerlink" href="#describing-communities-using-summary-statistics" title="Permalink to this headline">¶</a></h1>
+<p>Here we will take field data from invertebrates collected during the 2022 Kosciuszko National Park field trip and compute descriptive statistics to summarise the populations</p>
+<div class="cell tag_remove-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">inverts</span> <span class="o">&lt;-</span> <span class="nf">read_csv</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/mikheyev/ecology-r-code/main/data/inverts.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">Rows: </span><span class=" -Color -Color-Blue">97</span> <span class=" -Color -Color-Bold">Columns: </span><span class=" -Color -Color-Blue">15</span>
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">──</span> <span class=" -Color -Color-Bold">Column specification</span> <span class=" -Color -Color-Cyan">──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────</span>
+<span class=" -Color -Color-Bold">Delimiter:</span> &quot;,&quot;
+<span class=" -Color -Color-Red">chr</span> (6): Group, Taxa, Kingdom, Phylum, Subphylum or Order, How the organism ...
+<span class=" -Color -Color-Green">dbl</span> (9): Elevation, Mean flow rate (m/s), Mean temperature, Pack 1, Pack 2, ...
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Cyan">ℹ</span> Use <span class=" -Color -Color-Black -Color-Black-BGWhite">`spec()`</span> to retrieve the full column specification for this data.
+<span class=" -Color -Color-Cyan">ℹ</span> Specify the column types or set <span class=" -Color -Color-Black -Color-Black-BGWhite">`show_col_types = FALSE`</span> to quiet this message.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="define-functions-for-diversity-and-evenness">
+<h2>Define functions for diversity and evenness<a class="headerlink" href="#define-functions-for-diversity-and-evenness" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://search.r-project.org/CRAN/refmans/abdiv/html/menhinick.html">Menhinick richness index</a> measures diversity without considering relative species <a class="reference external" href="http://abundance.It">abundance.It</a>’s relatively crude, but simple to compute.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">if </span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span>
+        <span class="nf">sum</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span><span class="o">/</span><span class="nf">sqrt</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">else</span>
+        <span class="m">0</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Diversity_index#Shannon_index">Shannon’s index</a> combines species abundance to provide incorporate how abundance affects diversity.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">H</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">partH</span> <span class="o">&lt;-</span> <span class="m">0</span>
+    <span class="nf">for </span><span class="p">(</span><span class="n">i</span> <span class="n">in</span> <span class="n">n</span><span class="p">)</span>
+        <span class="nf">if </span><span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">)</span>
+            <span class="n">partH</span> <span class="o">=</span> <span class="n">partH</span> <span class="o">-</span> <span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">))</span> <span class="o">*</span> <span class="nf">log</span><span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="nf">sum</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="nf">return</span><span class="p">(</span><span class="n">partH</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Species_evenness">Evenness</a> is a measure of how similar the abundances of different species are in the community, and it is derived from dividing Shannon’s index by the natural log of the species count, which actually corresponds to the maximum possible H, for a given number of species.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">E</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nf">H</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="nf">log</span><span class="p">(</span><span class="nf">sum</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="m">0</span><span class="p">))</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="reshape-data-to-make-it-easier-to-analyze">
+<h2>reshape data to make it easier to analyze<a class="headerlink" href="#reshape-data-to-make-it-easier-to-analyze" title="Permalink to this headline">¶</a></h2>
+<p>The following commands reshape the data from the easy-to-enter-by-humans ‘wide’ format to the <code class="docutils literal notranslate"><span class="pre">long</span></code> format that R likes. The <code class="docutils literal notranslate"><span class="pre">starts_with</span></code> command says that the variables we need to reshape start with “Pack”, which is the leaf pack that is our unit of replication.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">inverts</span><span class="p">)</span>
+
+<span class="n">inverts_long</span> <span class="o">&lt;-</span> <span class="nf">pivot_longer</span><span class="p">(</span><span class="n">inverts</span><span class="p">,</span> <span class="nf">starts_with</span><span class="p">(</span><span class="s">&quot;Pack&quot;</span><span class="p">),</span> <span class="n">names_to</span> <span class="o">=</span> <span class="s">&quot;pack&quot;</span><span class="p">,</span> <span class="n">values_to</span> <span class="o">=</span> <span class="s">&quot;count&quot;</span><span class="p">)</span>
+
+<span class="nf">head</span><span class="p">(</span><span class="n">inverts_long</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 15</caption>
+<thead>
+	<tr><th scope=col>Group</th><th scope=col>Elevation</th><th scope=col>Mean flow rate (m/s)</th><th scope=col>Mean temperature</th><th scope=col>Taxa</th><th scope=col>Kingdom</th><th scope=col>Phylum</th><th scope=col>Subphylum or Order</th><th scope=col>How the organism feeds</th><th scope=col>Pack 1</th><th scope=col>Pack 2</th><th scope=col>Pack 3</th><th scope=col>Pack 4</th><th scope=col>Pack 5</th><th scope=col>Pack 6</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Stoneflies (Order Plecoptera)              </td><td>Animalia</td><td>Arthropoda</td><td>Hexapoda</td><td>Mostly Predators </td><td>15</td><td>0</td><td>4</td><td>3</td><td>NA</td><td>2</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Dragonflies and Damselflies (Order Odonata)</td><td>NA      </td><td>NA        </td><td>NA      </td><td>Mostly Predators </td><td> 0</td><td>0</td><td>4</td><td>3</td><td>NA</td><td>2</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Mayflies (Order Ephemeroptera)             </td><td>NA      </td><td>NA        </td><td>NA      </td><td>Mostly herbivores</td><td> 2</td><td>0</td><td>6</td><td>1</td><td>NA</td><td>0</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Water Beetles (Order Coleoptera)           </td><td>NA      </td><td>NA        </td><td>NA      </td><td>NA               </td><td> 0</td><td>0</td><td>0</td><td>0</td><td>NA</td><td>0</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>True Flies (Order Diptera)                 </td><td>NA      </td><td>NA        </td><td>NA      </td><td>NA               </td><td> 0</td><td>0</td><td>1</td><td>1</td><td>NA</td><td>0</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Isopod                                     </td><td>NA      </td><td>NA        </td><td>NA      </td><td>NA               </td><td> 1</td><td>0</td><td>0</td><td>0</td><td>NA</td><td>0</td></tr>
+</tbody>
+</table>
+</div><div class="output text_html"><table class="dataframe">
+<caption>A tibble: 6 × 11</caption>
+<thead>
+	<tr><th scope=col>Group</th><th scope=col>Elevation</th><th scope=col>Mean flow rate (m/s)</th><th scope=col>Mean temperature</th><th scope=col>Taxa</th><th scope=col>Kingdom</th><th scope=col>Phylum</th><th scope=col>Subphylum or Order</th><th scope=col>How the organism feeds</th><th scope=col>pack</th><th scope=col>count</th></tr>
+	<tr><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;chr&gt;</th><th scope=col>&lt;dbl&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Stoneflies (Order Plecoptera)</td><td>Animalia</td><td>Arthropoda</td><td>Hexapoda</td><td>Mostly Predators</td><td>Pack 1</td><td>15</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Stoneflies (Order Plecoptera)</td><td>Animalia</td><td>Arthropoda</td><td>Hexapoda</td><td>Mostly Predators</td><td>Pack 2</td><td> 0</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Stoneflies (Order Plecoptera)</td><td>Animalia</td><td>Arthropoda</td><td>Hexapoda</td><td>Mostly Predators</td><td>Pack 3</td><td> 4</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Stoneflies (Order Plecoptera)</td><td>Animalia</td><td>Arthropoda</td><td>Hexapoda</td><td>Mostly Predators</td><td>Pack 4</td><td> 3</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Stoneflies (Order Plecoptera)</td><td>Animalia</td><td>Arthropoda</td><td>Hexapoda</td><td>Mostly Predators</td><td>Pack 5</td><td>NA</td></tr>
+	<tr><td>Rosie</td><td>1610</td><td>0.2343445</td><td>10.632</td><td>Stoneflies (Order Plecoptera)</td><td>Animalia</td><td>Arthropoda</td><td>Hexapoda</td><td>Mostly Predators</td><td>Pack 6</td><td> 2</td></tr>
+</tbody>
+</table>
+</div></div>
+</div>
+<p>The set of calculations below is a bit hairy, but it illustrates the power of data manipulation in R, we do some cleaning and compute statistics to plot on the fly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="c1"># take `inverts_long` and assign the final result to `inverts_summary`</span>
+<span class="n">inverts_summary</span> <span class="o">&lt;-</span> <span class="n">inverts_long</span> <span class="o">%&gt;%</span>  
+  <span class="c1"># remove any counts with missing data</span>
+  <span class="nf">filter</span><span class="p">(</span><span class="o">!</span><span class="nf">is.na</span><span class="p">(</span><span class="n">count</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+  <span class="c1"># conduct measurements at the level of group and pack (our units of replication)</span>
+  <span class="nf">group_by</span><span class="p">(</span><span class="n">Group</span><span class="p">,</span> <span class="n">pack</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+  <span class="c1"># variables to compute -- not we&#39;re using the newly defined functions</span>
+  <span class="nf">summarize</span><span class="p">(</span><span class="n">Elevation</span> <span class="o">=</span> <span class="nf">first</span><span class="p">(</span><span class="n">Elevation</span><span class="p">),</span> <span class="n">flow</span> <span class="o">=</span> <span class="nf">first</span><span class="p">(</span><span class="n">`Mean flow rate (m/s)`</span><span class="p">),</span> <span class="n">D</span> <span class="o">=</span> <span class="nf">D</span><span class="p">(</span><span class="n">count</span><span class="p">),</span> <span class="n">H</span> <span class="o">=</span> <span class="nf">H</span><span class="p">(</span><span class="n">count</span><span class="p">),</span> <span class="n">E</span> <span class="o">=</span> <span class="nf">E</span><span class="p">(</span><span class="n">count</span><span class="p">)</span> <span class="p">)</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>`summarise()` has grouped output by &#39;Group&#39;. You can override using the `.groups` argument.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Take time to walk through the commands and make sure you understand what is going on in each line.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "r"
+        },
+        kernelOptions: {
+            kernelName: "ir",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ir'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="human-population.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Estimating human population growth parameters</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Sasha Mikheyev<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
