@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Estimating r and s for the human population &#8212; R commands for BIOL2131/BIOL6004</title>
+    <title>Estimating human population growth parameters &#8212; R commands for BIOL2131/BIOL6004</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -102,7 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Estimating r and s for the human population
+   Estimating human population growth parameters
   </a>
  </li>
 </ul>
@@ -145,11 +145,11 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="_sources/lecture-3.ipynb"><button type="button"
+            href="_sources/human-population.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/lecture-3.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/human-population.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -174,7 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/mikheyev/ecology-r-code/main?urlpath=tree/docs/lecture-3.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mikheyev/ecology-r-code/gh-pages?urlpath=tree/human-population.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -198,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Estimating r and s for the human population</h1>
+                <h1>Estimating human population growth parameters</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -209,9 +209,11 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="estimating-r-and-s-for-the-human-population">
-<h1>Estimating r and s for the human population<a class="headerlink" href="#estimating-r-and-s-for-the-human-population" title="Permalink to this headline">¶</a></h1>
-<p>First we read human population data</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="estimating-human-population-growth-parameters">
+<h1>Estimating human population growth parameters<a class="headerlink" href="#estimating-human-population-growth-parameters" title="Permalink to this headline">¶</a></h1>
+<p>In this exercise, we will estimate the intrinsic growth rate <span class="math notranslate nohighlight">\(r\)</span> and density-dependent growth rate <span class="math notranslate nohighlight">\(s\)</span> for human population data using linear regression. This is basically just a way to draw a line with a slope and an intercept to data in a way that fits the data the best. There are fancy statistics associated with this technique, but we will focus only on the value estimates and not worry about them.</p>
+<p>This technique is very general and we will use it throughout the course for many other data sets.</p>
+<p>First we read human population data.</p>
 <div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
@@ -280,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/lecture-3_4_0.png" src="_images/lecture-3_4_0.png" />
+<img alt="_images/human-population_4_0.png" src="_images/human-population_4_0.png" />
 </div>
 </div>
 <p>As we can see the population continues to increase, with no obvious pattern. Is it exponential? Let’s find out!
@@ -326,7 +328,7 @@ To do this, we will compute per capita population change</p>
 </table>
 </div></div>
 </div>
-<p>Note: We are taking <span class="math notranslate nohighlight">\(\Delta N\)</span> and <span class="math notranslate nohighlight">\(\Delta t\)</span> using the <code class="docutils literal notranslate"><span class="pre">lead</span></code> command. All it code does is take all the values of a column pairwise, and subtracts the <em>leading</em> value from the one before it.</p>
+<p>Note: We are taking <span class="math notranslate nohighlight">\(\Delta N\)</span> and <span class="math notranslate nohighlight">\(\Delta t\)</span> using the <code class="docutils literal notranslate"><span class="pre">lead</span></code> command. All it code does is take all the values of a column pairwise, and subtracts the <em>leading</em> value from the one before it. This is why there is a <code class="docutils literal notranslate"><span class="pre">NA</span></code> in the last row – there is no corresponding value for <code class="docutils literal notranslate"><span class="pre">lead</span></code> to take.</p>
 <p><em>Question:</em> Examine the new pop variable, at when did the human population have the highest per capita growth rate?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -339,7 +341,7 @@ To do this, we will compute per capita population change</p>
 “Removed 1 rows containing missing values (geom_point).”
 </pre></div>
 </div>
-<img alt="_images/lecture-3_8_1.png" src="_images/lecture-3_8_1.png" />
+<img alt="_images/human-population_8_1.png" src="_images/human-population_8_1.png" />
 </div>
 </div>
 <p>Now we can see that something interesting is happening – there is a change in how the population grows at about 3.4 billion people. We can a line with a slope <span class="math notranslate nohighlight">\(s\)</span> and an intercept <span class="math notranslate nohighlight">\(r\)</span> to the these data using linear regression.</p>
@@ -420,7 +422,7 @@ F-statistic: 84.95 on 1 and 7 DF,  p-value: 3.653e-05
 “Removed 1 rows containing missing values (geom_point).”
 </pre></div>
 </div>
-<img alt="_images/lecture-3_14_1.png" src="_images/lecture-3_14_1.png" />
+<img alt="_images/human-population_14_1.png" src="_images/human-population_14_1.png" />
 </div>
 </div>
 </div>
@@ -466,7 +468,7 @@ F-statistic: 84.95 on 1 and 7 DF,  p-value: 3.653e-05
     
       By Sasha Mikheyev<br/>
     
-        &copy; Copyright 2021.<br/>
+        &copy; Copyright 2022.<br/>
   </p>
 </footer>
 </main>

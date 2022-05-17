@@ -11,9 +11,13 @@ kernelspec:
   name: ir
 ---
 
-# Estimating r and s for the human population
+# Estimating human population growth parameters
 
-First we read human population data
+In this exercise, we will estimate the intrinsic growth rate $r$ and density-dependent growth rate $s$ for human population data using linear regression. This is basically just a way to draw a line with a slope and an intercept to data in a way that fits the data the best. There are fancy statistics associated with this technique, but we will focus only on the value estimates and not worry about them.
+
+This technique is very general and we will use it throughout the course for many other data sets.
+
+First we read human population data.
 
 ```{code-cell}
 :tags: ["remove-output"]
@@ -39,7 +43,7 @@ pop <- pop %>% mutate(perCapChange = (lead(population) - population)/population/
 pop
 ```
 
-Note: We are taking $\Delta N$ and $\Delta t$ using the `lead` command. All it code does is take all the values of a column pairwise, and subtracts the *leading* value from the one before it.
+Note: We are taking $\Delta N$ and $\Delta t$ using the `lead` command. All it code does is take all the values of a column pairwise, and subtracts the *leading* value from the one before it. This is why there is a `NA` in the last row -- there is no corresponding value for `lead` to take.
 
 *Question:* Examine the new pop variable, at when did the human population have the highest per capita growth rate?
 
