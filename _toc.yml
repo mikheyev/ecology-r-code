@@ -5,5 +5,5 @@ format: jb-article
 root: intro
 sections:
 - file: human-population
-#- file: community-statistics
+- file: kosi-inverts
 
