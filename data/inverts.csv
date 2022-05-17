@@ -1,0 +1,98 @@
+﻿Group,Elevation,Mean flow rate (m/s),Mean temperature,Taxa,Kingdom,Phylum,Subphylum or Order,How the organism feeds,Pack 1,Pack 2,Pack 3,Pack 4,Pack 5,Pack 6
+Rosie,1610,0.234344486,10.632,Stoneflies (Order Plecoptera),Animalia,Arthropoda,Hexapoda,Mostly Predators,15,0,4,3,NA,2
+Rosie,1610,0.234344486,10.632,Dragonflies and Damselflies (Order Odonata),,,,Mostly Predators,0,0,4,3,NA,2
+Rosie,1610,0.234344486,10.632,Mayflies (Order Ephemeroptera),,,,Mostly herbivores,2,0,6,1,NA,0
+Rosie,1610,0.234344486,10.632,Water Beetles (Order Coleoptera),,,,,0,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,True Flies (Order Diptera),,,,,0,0,1,1,NA,0
+Rosie,1610,0.234344486,10.632,Isopod,,,,,1,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,Hymenoptera,,,,,1,0,0,0,NA,2
+Rosie,1610,0.234344486,10.632,"Crane Flies(Order Diptera, Family Tipulidae)",,,,,0,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,Dobsonflies and Alderflies (Order Megaloptera),,,,,0,0,0,1,NA,0
+Rosie,1610,0.234344486,10.632,Caddisflies (Order Tricoptera),,,,,0,0,0,1,NA,0
+Rosie,1610,0.234344486,10.632,"Net-spinner Caddisflies (Order Tricoptera, Family Hydropsychidae)",,,,,0,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,Water mites (Order Acari),,,,,0,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,Scuds (Order Amphipoda),,,,,3,0,1,0,NA,0
+Rosie,1610,0.234344486,10.632,Sowbugs (Order Isopoda),,,,,0,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,Crayfish (Order Decapoda),,,,,0,0,1,0,NA,0
+Rosie,1610,0.234344486,10.632,Snails (Class Gastropoda),,,,,0,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,Clams and Mussels (Class Bivalvia),,,,,0,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,Leeches (Subclass Hirudinea),,,,,0,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,Aquatic Earthworms (Subclass Oligochaeta),,,,,0,0,0,0,NA,0
+Rosie,1610,0.234344486,10.632,Planaria (Class Turbellaria),,,,,0,0,0,0,NA,0
+Cal,1740,0.124167046,11.358,Stoneflies (Order Plecoptera),Animalia,Arthropoda,Hexapoda,Mostly Predators,1,0,0,0,5,6
+Cal,1740,0.124167046,11.358,Dragonflies and Damselflies (Order Odonata),,,,,0,0,0,1,0,2
+Cal,1740,0.124167046,11.358,Mayflies (Order Ephemeroptera),,,,,0,0,3,1,0,1
+Cal,1740,0.124167046,11.358,Water Beetles (Order Coleoptera),,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,True Flies (Order Diptera),,,,,3,2,0,1,2,17
+Cal,1740,0.124167046,11.358,"Crane Flies(Order Diptera, Family Tipulidae)",,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,Dobsonflies and Alderflies (Order Megaloptera),,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,Caddisflies (Order Tricoptera),,,,,1,0,0,2,0,5
+Cal,1740,0.124167046,11.358,"Net-spinner Caddisflies (Order Tricoptera, Family Hydropsychidae)",,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,Water mites (Order Acari),,,,,0,0,0,0,0,1
+Cal,1740,0.124167046,11.358,Scuds (Order Amphipoda),,,,,0,0,4,0,0,0
+Cal,1740,0.124167046,11.358,Sowbugs (Order Isopoda),,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,Crayfish (Order Decapoda),,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,Snails (Class Gastropoda),,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,Clams and Mussels (Class Bivalvia),,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,Leeches (Subclass Hirudinea),,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,Aquatic Earthworms (Subclass Oligochaeta),,,,,0,0,0,0,0,1
+Cal,1740,0.124167046,11.358,Planaria (Class Turbellaria),,,,,0,0,0,0,0,0
+Cal,1740,0.124167046,11.358,Springtail,,,,,0,0,0,0,0,2
+Cal,1740,0.124167046,11.358,Roundworm,,,,,0,0,0,0,0,1
+Cal,1740,0.124167046,11.358,Unkown Pupae,,,,,0,0,0,0,0,1
+Ollie,1400,0.065045351,11.219,Stoneflies (Order Plecoptera),Animalia,Arthropoda,Hexapoda,Mostly Predators,NA,0,NA,NA,7,1
+Ollie,1400,0.065045351,11.219,Dragonflies and Damselflies (Order Odonata),,,,,NA,0,NA,NA,0,17
+Ollie,1400,0.065045351,11.219,Mayflies (Order Ephemeroptera),,,,,NA,0,NA,NA,15,4
+Ollie,1400,0.065045351,11.219,Water Beetles (Order Coleoptera),,,,,NA,0,NA,NA,0,2
+Ollie,1400,0.065045351,11.219,True Flies (Order Diptera),,,,,NA,0,NA,NA,0,2
+Ollie,1400,0.065045351,11.219,"Crane Flies(Order Diptera, Family Tipulidae)",,,,,NA,0,NA,NA,0,0
+Ollie,1400,0.065045351,11.219,Dobsonflies and Alderflies (Order Megaloptera),,,,,NA,0,NA,NA,0,0
+Ollie,1400,0.065045351,11.219,Caddisflies (Order Tricoptera),,,,,NA,0,NA,NA,0,1
+Ollie,1400,0.065045351,11.219,"Net-spinner Caddisflies (Order Tricoptera, Family Hydropsychidae)",,,,,NA,0,NA,NA,0,0
+Ollie,1400,0.065045351,11.219,Water mites (Order Acari),,,,,NA,0,NA,NA,0,0
+Ollie,1400,0.065045351,11.219,Scuds (Order Amphipoda),,,,,NA,0,NA,NA,14,19
+Ollie,1400,0.065045351,11.219,Sowbugs (Order Isopoda),Animalia,Arthropoda,Isopoda,Forages for decaying invertebrates and organic matter,NA,5,NA,NA,0,0
+Ollie,1400,0.065045351,11.219,Crayfish (Order Decapoda),,,,,NA,0,NA,NA,0,1
+Ollie,1400,0.065045351,11.219,Snails (Class Gastropoda),,,,,NA,0,NA,NA,0,0
+Ollie,1400,0.065045351,11.219,Clams and Mussels (Class Bivalvia),,,,,NA,0,NA,NA,0,0
+Ollie,1400,0.065045351,11.219,Leeches (Subclass Hirudinea),,,,,NA,0,NA,NA,0,0
+Ollie,1400,0.065045351,11.219,Aquatic Earthworms (Subclass Oligochaeta),,,,,NA,0,NA,NA,0,1
+Ollie,1400,0.065045351,11.219,Planaria (Class Turbellaria),,,,,NA,0,NA,NA,0,0
+Ollie,1400,0.065045351,11.219,Spiders (Order Araneae),,,,,NA,0,NA,NA,1,0
+Tom,1800,4.830917874,11.19,Stoneflies (Order Plecoptera),Animalia,Arthropoda,Hexapoda,Mostly Predators,0,14,1,0,0,1
+Tom,1800,4.830917874,11.19,Dragonflies and Damselflies (Order Odonata),,,,,2,2,1,0,0,0
+Tom,1800,4.830917874,11.19,Mayflies (Order Ephemeroptera),,,,,0,2,0,2,0,1
+Tom,1800,4.830917874,11.19,Water Beetles (Order Coleoptera),,,,,0,1,0,0,0,1
+Tom,1800,4.830917874,11.19,True Flies (Order Diptera),,,,,0,0,0,5,7,1
+Tom,1800,4.830917874,11.19,"Crane Flies(Order Diptera, Family Tipulidae)",,,,,0,1,0,0,0,0
+Tom,1800,4.830917874,11.19,Dobsonflies and Alderflies (Order Megaloptera),,,,,0,0,0,0,1,0
+Tom,1800,4.830917874,11.19,Caddisflies (Order Tricoptera),,,,,6,1,0,2,2,13
+Tom,1800,4.830917874,11.19,"Net-spinner Caddisflies (Order Tricoptera, Family Hydropsychidae)",,,,,0,0,1,0,0,0
+Tom,1800,4.830917874,11.19,Water mites (Order Acari),,,,,0,0,0,0,0,0
+Tom,1800,4.830917874,11.19,Scuds (Order Amphipoda),,,,,0,0,0,0,0,0
+Tom,1800,4.830917874,11.19,Sowbugs (Order Isopoda),,,,,0,0,0,1,2,0
+Tom,1800,4.830917874,11.19,Crayfish (Order Decapoda),,,,,0,0,0,0,0,0
+Tom,1800,4.830917874,11.19,Snails (Class Gastropoda),,,,,0,0,0,0,0,0
+Tom,1800,4.830917874,11.19,Clams and Mussels (Class Bivalvia),,,,,0,0,0,0,0,0
+Tom,1800,4.830917874,11.19,Leeches (Subclass Hirudinea),,,,,0,0,0,0,0,0
+Tom,1800,4.830917874,11.19,Aquatic Earthworms (Subclass Oligochaeta),,,,,0,1,3,0,0,1
+Tom,1800,4.830917874,11.19,Planaria (Class Turbellaria),,,,,0,0,1,0,0,0
+Maddie,1210,0.583430572,NA,Stoneflies (Order Plecoptera),Animalia,Arthropoda,Hexapoda,Mostly Predators,27,6,4,0,9,0
+Maddie,1210,0.583430572,NA,Dragonflies and Damselflies (Order Odonata),,,,,1,0,0,0,2,1
+Maddie,1210,0.583430572,NA,Mayflies (Order Ephemeroptera),,,,,2,6,0,7,0,0
+Maddie,1210,0.583430572,NA,Water Beetles (Order Coleoptera),,,,,1,0,1,0,0,0
+Maddie,1210,0.583430572,NA,True Flies (Order Diptera),,,,,0,0,0,0,0,0
+Maddie,1210,0.583430572,NA,"Crane Flies(Order Diptera, Family Tipulidae)",,,,,0,0,0,0,0,0
+Maddie,1210,0.583430572,NA,Dobsonflies and Alderflies (Order Megaloptera),,,,,0,0,0,0,6,0
+Maddie,1210,0.583430572,NA,Caddisflies (Order Tricoptera),,,,,0,0,0,0,0,1
+Maddie,1210,0.583430572,NA,"Net-spinner Caddisflies (Order Tricoptera, Family Hydropsychidae)",,,,,0,0,0,0,1,0
+Maddie,1210,0.583430572,NA,Water mites (Order Acari),,,,,0,0,0,0,0,0
+Maddie,1210,0.583430572,NA,Scuds (Order Amphipoda),,,,,0,0,0,0,0,1
+Maddie,1210,0.583430572,NA,Sowbugs (Order Isopoda),,,,,0,0,0,0,0,0
+Maddie,1210,0.583430572,NA,Crayfish (Order Decapoda),,,,,0,0,0,0,0,0
+Maddie,1210,0.583430572,NA,Snails (Class Gastropoda),,,,,0,0,0,0,0,0
+Maddie,1210,0.583430572,NA,Clams and Mussels (Class Bivalvia),,,,,0,0,0,0,0,0
+Maddie,1210,0.583430572,NA,Leeches (Subclass Hirudinea),,,,,0,0,0,0,0,0
+Maddie,1210,0.583430572,NA,Aquatic Earthworms (Subclass Oligochaeta),,,,,0,0,0,0,6,0
+Maddie,1210,0.583430572,NA,Planaria (Class Turbellaria),,,,,0,0,0,0,0,0
+,,,,,,,,,,,,,,
